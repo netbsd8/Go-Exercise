@@ -1,11 +1,5 @@
 package main
 
-// ListNode: comment to export
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func add2nums1(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1 == nil && l2 == nil {
 		return nil
