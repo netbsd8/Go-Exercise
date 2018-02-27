@@ -7,7 +7,7 @@ func removeNthFormEnd(head *ListNode, n int) *ListNode {
 	pprev := dummyNode
 	prev := head
 	cur := head
-	for i := 0; i < n; i++ {
+	for i := 0; i < n-1; i++ {
 		cur = cur.Next
 	}
 
