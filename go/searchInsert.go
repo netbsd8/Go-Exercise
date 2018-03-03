@@ -35,7 +35,7 @@ func searchInsert(nums []int, target int) int {
 	if target <= nums[l] {
 		return l
 	}
-	if target == nums[r] {
+	if target <= nums[r] {
 		return r
 	}
 	return r + 1

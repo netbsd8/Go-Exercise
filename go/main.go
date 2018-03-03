@@ -6,6 +6,9 @@ type ListNode struct {
 	Next *ListNode
 }
 
+/*
 func main() {
-	return
+	ret := countAndSay(1)
+	fmt.Println(ret)
 }
+*/
