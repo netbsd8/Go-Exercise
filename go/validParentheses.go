@@ -1,15 +1,8 @@
 package main
 
-type stack []byte
-
-func (s stack) Push(c byte) stack {
-	return append(s, c)
-}
-
-func (s stack) Pop() (stack, byte) {
-	l := len(s)
-	return s[:l-1], s[l-1]
-}
+import (
+	"github.com/golang-collections/collections/stack"
+)
 
 func isValid(s string) bool {
 	length := len(s)
@@ -22,18 +15,20 @@ func isValid(s string) bool {
 		return false
 	}
 
-	var sk stack
+	var sk = stack.New()
+
 	for i := 0; i < length; i++ {
 		if s[i] == '(' || s[i] == '{' || s[i] == '[' {
-			sk = sk.Push(s[i])
+			sk.Push(s[i])
 			continue
 		}
 
-		if len(sk) == 0 {
+		if sk.Len() == 0 {
 			return false
 		}
 
-		skk, cur := sk.Pop()
+		cur := sk.Peek()
+		sk.Pop()
 		if s[i] == ')' && cur != '(' {
 			return false
 		}
@@ -43,8 +38,7 @@ func isValid(s string) bool {
 		if s[i] == ']' && cur != '[' {
 			return false
 		}
-		sk = skk
 	}
 
-	return len(sk) == 0
+	return sk.Len() == 0
 }

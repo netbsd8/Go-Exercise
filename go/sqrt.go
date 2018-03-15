@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+//import "fmt"
 
 func mySqrt(x int) int {
 	if x == 0 {
@@ -34,7 +34,9 @@ func mySqrt(x int) int {
 	return l
 }
 
+/*
 func main() {
 	ret := mySqrt(65)
 	fmt.Println(ret)
 }
+*/

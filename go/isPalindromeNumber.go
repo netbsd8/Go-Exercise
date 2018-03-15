@@ -1,6 +1,6 @@
 package main
 
-func isPalindrome(x int) bool {
+func isPalindrome1(x int) bool {
 	if x < 0 {
 		return false
 	}
