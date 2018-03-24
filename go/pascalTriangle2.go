@@ -1,7 +1,7 @@
 package main 
 
 import (
-	"fmt"
+	//"fmt"
 )
 
 func getRow(rowIndex int) []int {
@@ -29,7 +29,9 @@ func getRow(rowIndex int) []int {
 	return ans
 }
 
+/*
 func main() {
 	ans := getRow(1)
 	fmt.Println(ans)
 }
+*/
